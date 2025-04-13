@@ -26,17 +26,17 @@
 git clone https://github.com/your-username/seesaw-game.git
 cd seesaw-game
 bun install # 安装依赖
-``
+```
 
 ### 💻 本运行
 
 使用任意本地服务器工具启动项，例如
 
 ```bash
-bun run dev 
+bun run dev
 ```
 
-然后在浏览器中访问 `http://localhost:3000` 即可始游戏。
+然后在浏览器中访问 `http://localhost:3000` 即可始游戏。
 
 
 如果您喜欢这个项目，请点击右上角的 ⭐️Star 支持一下！您的支持是我们持续改进的动力。感谢您的关注与支持！
