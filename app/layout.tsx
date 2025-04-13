@@ -14,9 +14,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}
+      <head>
+         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+      </head>
+      <body>
+      <header className='header'>
+  <nav>
+    <div className='logo'>
+      🎃 南瓜跷跷板
+    </div>
+    <a href="https://github.com/hotseo123/pumpkin-seesaw" target="_blank" className='github'>
+      ⭐ 查看源码 on GitHub
+    </a>
+  </nav>
+</header>
+        {children}
         <footer className='copyright'>
-         © 2025 Seesaw Game. Created by <a href="https://www.11meigui.com/">嘻嘻IT</a>
+        © 2025 Seesaw Game. Created by <a href="https://www.11meigui.com/">嘻嘻IT</a>
         </footer>
       </body>
     </html>

@@ -357,7 +357,8 @@ export function PumpkinGame() {
   useEffect(() => {
     // 如果有南瓜在跷跷板上，且角度接近0，则认为平衡
     const hasSeesawPumpkins = pumpkins.some((p) => p.onSeesaw)
-    const isNowBalanced = Math.abs(seesawAngle) < 3 && leftWeight > 0 && rightWeight > 0
+    // const isNowBalanced = Math.abs(seesawAngle) < 3 && leftWeight > 0 && rightWeight > 0
+    const isNowBalanced = leftWeight == rightWeight && leftWeight > 0 && rightWeight > 0
 
     // 只有当状态从不平衡变为平衡时才触发奖励，并且之前没有显示过奖励
     if (isNowBalanced && !isBalanced && hasSeesawPumpkins && !hasShownReward) {
@@ -393,6 +394,11 @@ export function PumpkinGame() {
   // 继续游戏，关闭提示但不重置
   const continueGame = () => {
     setShowResetPrompt(false)
+
+    //重置游戏提示
+    setShowReward(false)
+    // setIsBalanced(false)
+    setHasShownReward(false)
   }
 
   // 重置游戏
